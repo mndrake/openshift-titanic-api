@@ -4,14 +4,14 @@ basic flask-restplus api example
 from flask import Flask
 from flask_restplus import Resource, Api
 
-app = Flask(__name__)
-api = Api(app)
+application = Flask(__name__)
+api = Api(application)
 
-@app.route('/hello')
+@application.route('/hello')
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
 
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
