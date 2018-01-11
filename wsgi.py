@@ -7,7 +7,7 @@ from flask_restplus import Resource, Api
 application = Flask(__name__)
 api = Api(application)
 
-@application.route('/hello')
+@api.route('/hello')
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
